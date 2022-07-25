@@ -29,6 +29,7 @@ namespace SalesWebMvc {
 
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
+            services.AddScoped<DepartmentService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SeedingService seedingService) {
@@ -37,7 +38,7 @@ namespace SalesWebMvc {
                 app.UseDeveloperExceptionPage();
             } else {
                 app.UseExceptionHandler("/Home/Error");
-                 app.UseHsts();
+                app.UseHsts();
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
