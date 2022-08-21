@@ -50,7 +50,6 @@ namespace SalesWebMvc.Services {
                 _context.Update(obj);
                 await _context.SaveChangesAsync();
             } catch (DbConcurrencyException e) {
-
                 throw new DbConcurrencyException(e.Message);
             }
 
